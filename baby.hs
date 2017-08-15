@@ -143,7 +143,7 @@ sum' :: (Num a) => [a] -> a
 -- sum' xs = foldl (+) 0 xs
 sum' = foldl (+) 0
 
--- 合成関数
+-- 関数合成
 -- map (negate . abs) [1,2,3]
 -- [-1,-2,-3]
 -- これは以下の式と同じ

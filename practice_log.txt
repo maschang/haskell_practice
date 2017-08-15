@@ -161,3 +161,22 @@ lucky x = "Sorry, you're out of luck, pal!"
   - . 関数を使ってそれを実現する。
 - ポイントフリースタイル
   - 一時変数を取り除く書き方のこと。Rubyの `[1,2,3].map(&:+)` 的なやつかな。
+
+- モジュール
+  - 便利なモジュールは「Hackage」で探すと良いとのこと。
+  - 良さそうなものを見つけたら「cabal install package 名」でインストールできる。
+  - 【使い方】
+    - <import モジュール名> で使えるようになる。
+      - 特定の関数のみにアクセスする場合は
+        - import Data.List (nub, sort)
+      - 特定の関数以外をimportする場合は
+        - import Data.List hiding (nub, sort)
+    - GHCiからアクセスする場合は `:m + Data.List`
+    - 修飾付きimport
+      - 名前の競合を避ける為の方法。
+      - qualifiedを使う。
+        - import qualified Data.Map
+        - Data.Map.filter
+      - as を使う。
+        - import qualified Data.Map as M
+        - M.filter
